@@ -60,4 +60,9 @@ class UserController extends Controller
 
         return redirect()->back()->with('success', 'Usuario actualizado correctamente');
     }
+
+    public function destroy(User $user){
+        $user->delete();
+        return redirect()->back()->with('success','Usuario eliminado correctamente');
+    }
 }
